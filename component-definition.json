@@ -689,6 +689,31 @@
               }
             }
           }
+        },
+        {
+          "title": "My custom card",
+          "id": "my-custom-card",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/radiobutton/v1/radiobutton",
+                "template": {
+                  "jcr:title": "My custom card",
+                  "fieldType": "radio-group",
+                  "enum": [
+                    "0",
+                    "1"
+                  ],
+                  "enumNames": [
+                    "Item 1",
+                    "Item 2"
+                  ],
+                  "orientation": "horizontal",
+                  "fd:viewType": "my-custom-card"
+                }
+              }
+            }
+          }
         }
       ]
 >>>>>>> df58285 (Initial commit)
