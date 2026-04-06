@@ -12,9 +12,9 @@
  */
 export default async function decorate(fieldDiv, fieldJson, parentElement, formId) {
   console.log('⚙️ Decorating my-custom-card component:', fieldDiv, fieldJson, parentElement, formId);
-  
+
   // TODO: Implement your custom component logic here
   // You can access the field properties via fieldJson.properties
-  
+
   return fieldDiv;
 }
