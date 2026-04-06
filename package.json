@@ -59,8 +59,8 @@
   "devDependencies": {
     "@adobe/json-formula": "0.1.50",
     "@aemforms/af-core": "0.22.167",
-    "@aemforms/af-formatters": "0.22.167",
     "@aemforms/af-custom-functions": "1.0.14",
+    "@aemforms/af-formatters": "0.22.167",
     "@babel/eslint-parser": "7.28.0",
     "@playwright/test": "^1.43.1",
     "@testing-library/dom": "9.3.4",
@@ -122,5 +122,8 @@
     "spec": "test/**/*.test.js",
     "require": "test/unit/setup-env.js",
     "recursive": "true"
+  },
+  "dependencies": {
+    "@adobe/aem-cli": "^16.16.32"
   }
 }
