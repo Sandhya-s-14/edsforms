@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /**
  * Custom my-custom-card component
  * Based on: Radio Group
@@ -5,6 +6,7 @@
 
 /**
  * Decorates a custom form field component
+ // eslint-disable-next-line max-len
  * @param {HTMLElement} fieldDiv - The DOM element containing the field wrapper. Refer to the documentation for its structure for each component.
  * @param {Object} fieldJson - The form json object for the component.
  * @param {HTMLElement} parentElement - The parent element of the field.
