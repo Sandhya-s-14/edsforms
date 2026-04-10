@@ -13,6 +13,7 @@
  * @param {string} formId - The unique identifier of the form.
  */
 export default async function decorate(fieldDiv, fieldJson, parentElement, formId) {
+  // eslint-disable-next-line no-console
   console.log('⚙️ Decorating my-custom-card component:', fieldDiv, fieldJson, parentElement, formId);
 
   // TODO: Implement your custom component logic here
