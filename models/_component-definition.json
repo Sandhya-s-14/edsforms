@@ -45,6 +45,9 @@
         },
         {
           "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/definitions"
+        },
+        {
+          "...": "../blocks/form/components/file-upload/_file-upload.json#/definitions"
         }
       ]
     }
