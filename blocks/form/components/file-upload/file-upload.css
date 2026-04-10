@@ -1,0 +1,96 @@
+/* Main container */
+.file-upload {
+  border: 2px dashed #d1d5db;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.file-upload:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Drag active state */
+.file-upload.dragover {
+  border-color: #2563eb;
+  background-color: #dbeafe;
+}
+
+/* Upload button */
+.file-upload button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.file-upload button:hover {
+  background-color: #2563eb;
+}
+
+/* Drag text */
+.file-upload .drag-text {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* File preview */
+.file-preview {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* File name */
+.file-preview .file-name {
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Remove button */
+.file-preview .remove-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.file-preview .remove-btn:hover {
+  background: #dc2626;
+}
+
+/* Error message */
+.file-error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Success message */
+.file-success {
+  color: #16a34a;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Hide default input */
+.file-upload input[type="file"] {
+  display: none;
+}
