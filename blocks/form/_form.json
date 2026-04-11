@@ -95,7 +95,8 @@
         "wizard",
         "range",
         "my-custom-card",
-        "upload"
+        "upload",
+        "custom-rating"
       ]
     }
   ]

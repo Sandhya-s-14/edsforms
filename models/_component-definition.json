@@ -48,6 +48,9 @@
         },
         {
           "...": "../blocks/form/components/upload/_upload.json#/definitions"
+        },
+        {
+          "...": "../blocks/form/components/custom-rating/_custom-rating.json#/definitions"
         }
       ]
     }

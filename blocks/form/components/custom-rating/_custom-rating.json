@@ -1,0 +1,55 @@
+{
+  "definitions": [
+    {
+      "title": "Custom rating",
+      "id": "custom-rating",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "fd/franklin/components/form/textinput/v1/textinput",
+            "template": {
+              "jcr:title": "Custom rating",
+              "fieldType": "text-input",
+              "fd:viewType": "custom-rating"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "custom-rating",
+      "fields": [
+        {
+          "component": "tab",
+          "label": "Basic",
+          "name": "basic"
+        },
+        {
+          "...": "../../models/form-common/_basic-input-placeholder-fields.json#/fields"
+        },
+        {
+          "...": "../../models/form-common/_basic-input-default-value-fields.json#/fields"
+        },
+        {
+          "component": "boolean",
+          "name": "multiLine",
+          "label": "Allow multiple lines",
+          "valueType": "boolean"
+        },
+        {
+          "component": "tab",
+          "label": "Validation",
+          "name": "validation"
+        },
+        {
+          "...": "../../models/form-common/_string-validation-fields.json#/fields"
+        },
+        {
+          "...": "../../models/form-common/_help-container.json#/fields"
+        }
+      ]
+    }
+  ]
+}
