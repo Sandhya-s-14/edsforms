@@ -20,14 +20,19 @@
   cursor: pointer;
 }
 
-/* Default star */
+/* Base star (ONLY ONCE) */
 .custom-rating .stars span {
   font-size: 28px;
   color: #ccc;
-  transition: all 0.2s ease;
+  transition: transform 0.15s ease, color 0.2s ease;
 }
 
-/* Selected stars */
+/* Hover effect */
+.custom-rating .stars span:hover {
+  transform: scale(1.2);
+}
+
+/* Active stars */
 .custom-rating .stars span.active {
   color: gold;
 }
@@ -35,26 +40,4 @@
 /* Hover preview */
 .custom-rating .stars span.hover {
   color: orange;
-}
-
-/* Hover animation */
-.custom-rating .stars span:hover {
-  transform: scale(1.2);
-}
-
-/* Smooth transition */
-.custom-rating .stars span {
-  transition: transform 0.15s ease, color 0.2s ease;
-}
-
-/* Optional: subtle glow on selection */
-.custom-rating .stars span.active {
-  text-shadow: 0 0 4px rgba(255, 215, 0, 0.6);
-}
-
-/* Mobile friendly */
-@media (max-width: 600px) {
-  .custom-rating .stars span {
-    font-size: 24px;
-  }
 }
