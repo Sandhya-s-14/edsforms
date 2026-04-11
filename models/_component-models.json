@@ -1,12 +1,7 @@
-[
-  { "...": "./_page.json#/models" },
-  { "...": "./_image.json#/models" },
-  { "...": "./_title.json#/models" },
-  { "...": "./_text.json#/models" },
-  { "...": "./_button.json#/models" },
-  { "...": "./_section.json#/models" },
-
-  { "...": "../blocks/form/_form.json#/models" },
-  { "...": "../blocks/form/components/range/_range.json#/models" },
-  { "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/models" }
-]
+[ { "...": "./_page.json#/models" }, 
+{ "...": "./_image.json#/models" }, 
+{ "...": "./_title.json#/models" }, 
+{ "...": "./_text.json#/models" }, 
+{ "...": "./_button.json#/models" }, 
+{ "...": "./_section.json#/models" }, 
+{ "...": "../blocks/*/_*.json#/models" } ]

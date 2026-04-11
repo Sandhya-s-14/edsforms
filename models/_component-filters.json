@@ -1,14 +1,3 @@
-[
-  {
-    "id": "main",
-    "components": [
-      "section",
-      "form",
-      "range",
-      "my-custom-card"
-    ]
-  },
-  {
-    "...": "./_section.json#/filters"
-  }
-]
+[ { "id": "main", "components": [ "section" ] }, 
+{ "...": "./_section.json#/filters" }, 
+{ "...": "../blocks/*/_*.json#/filters" } ]
