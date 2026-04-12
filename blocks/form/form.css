@@ -803,3 +803,93 @@ main .form form select[multiple] {
     height: calc(42px + 50px);
 }
 
+/* ================= PANEL FIX (MAIN ISSUE) ================= */
+
+/* REMOVE OLD FLEX (THIS WAS BREAKING LAYOUT) */
+main form .panel-wrapper {
+  display: block !important;
+}
+
+/* APPLY GRID TO PANEL */
+main .form form .panel-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  background: #f7f9fc;      /* light background like your target */
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* ================= FIELD LAYOUT ================= */
+
+/* DEFAULT FULL WIDTH */
+main .form form .field-wrapper {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 2 COLUMN SUPPORT */
+main .form form .field-wrapper.col-6 {
+  grid-column: span 6;
+}
+
+/* ================= INPUT STYLING ================= */
+
+main .form input,
+main .form select,
+main .form textarea {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* INPUT HOVER */
+main .form input:hover,
+main .form select:hover {
+  border-color: #999;
+}
+
+/* ================= LABEL ================= */
+
+main .form label {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 6px;
+}
+
+/* ================= PANEL TITLE ================= */
+
+main .form form fieldset > legend {
+  font-size: 20px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+/* ================= REMOVE EXTRA STYLES ================= */
+
+main .form form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  main .form form .panel-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  main .form form .field-wrapper,
+  main .form form .field-wrapper.col-6 {
+    grid-column: span 1;
+  }
+}
