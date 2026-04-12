@@ -619,7 +619,49 @@
               }
             }
           }
+        },
+        {
+  "title": "Custom Rating",
+  "id": "custom-rating",
+  "plugins": {
+    "xwalk": {
+      "page": {
+        "resourceType": "core/fd/components/form/textinput/v1/textinput",
+        "template": {
+          "jcr:title": "Custom Rating",
+          "fieldType": "text-input",
+          "fd:viewType": "custom-rating"
         }
+      }
+    }
+  }
+},
+{
+  "title": "Upload",
+  "id": "upload",
+  "plugins": {
+    "xwalk": {
+      "page": {
+        "resourceType": "core/fd/components/form/fileinput/v2/fileinput",
+        "template": {
+          "jcr:title": "Upload",
+          "fieldType": "file-input",
+          "accept": [
+            "audio/*",
+            "video/*",
+            "image/*",
+            "text/*",
+            "application/pdf"
+          ],
+          "buttonText": "Attach",
+          "dragDropText": "Drag and Drop To Upload",
+          "type": "file",
+          "fd:viewType": "upload"
+        }
+      }
+    }
+  }
+}
       ]
     }
   ]

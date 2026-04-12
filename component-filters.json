@@ -5,7 +5,9 @@
       "section",
       "form",
       "range",
-      "my-custom-card"
+      "my-custom-card",
+      "custom-rating",
+      "upload"
     ]
   },
   {
