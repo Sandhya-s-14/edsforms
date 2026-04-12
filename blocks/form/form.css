@@ -802,3 +802,61 @@ main div.form-wrapper {
 main .form form select[multiple] {
     height: calc(42px + 50px);
 }
+/*-----------------------------------------------------------------*/
+
+/* CENTER THE WHOLE FORM */
+main .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* FIX PANEL WIDTH (LOGIN CARD) */
+main .form form .panel-wrapper.field-sign-in {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* GENERAL PANEL STYLE */
+main .form form .panel-wrapper {
+  background: #f7f9fc;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* INPUT STYLE */
+main .form input {
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+}
+
+/* BUTTON FULL WIDTH */
+main .form button {
+  width: 100%;
+  background: #5F8DDA;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* BUTTON HOVER */
+main .form button:hover {
+  background: #035fe6;
+}
+
+/* LABEL */
+main .form label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #4b5563;
+}
+
+/* REMOVE GRID STRETCH FOR LOGIN */
+main .form form {
+  display: block;
+}
