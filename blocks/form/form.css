@@ -805,20 +805,20 @@ main .form form select[multiple] {
 /*-----------------------------------------------------------------*/
 
 /* CENTER THE WHOLE FORM */
+/* CENTER FORM (SAFE VERSION) */
 main .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  padding: 40px 0;
 }
 
-/* FIX PANEL WIDTH (LOGIN CARD) */
+/* FIX PANEL WIDTH */
 main .form form .panel-wrapper.field-sign-in {
   max-width: 400px;
   width: 100%;
 }
 
-/* GENERAL PANEL STYLE */
+/* PANEL STYLE */
 main .form form .panel-wrapper {
   background: #f7f9fc;
   padding: 30px;
@@ -826,7 +826,7 @@ main .form form .panel-wrapper {
   border: 1px solid #e5e7eb;
 }
 
-/* INPUT STYLE */
+/* INPUT */
 main .form input {
   height: 45px;
   border-radius: 10px;
@@ -834,7 +834,7 @@ main .form input {
   padding: 10px;
 }
 
-/* BUTTON FULL WIDTH */
+/* BUTTON */
 main .form button {
   width: 100%;
   background: #5F8DDA;
@@ -844,7 +844,6 @@ main .form button {
   font-size: 16px;
 }
 
-/* BUTTON HOVER */
 main .form button:hover {
   background: #035fe6;
 }
@@ -856,7 +855,7 @@ main .form label {
   color: #4b5563;
 }
 
-/* REMOVE GRID STRETCH FOR LOGIN */
+/* REMOVE GRID */
 main .form form {
   display: block;
 }
