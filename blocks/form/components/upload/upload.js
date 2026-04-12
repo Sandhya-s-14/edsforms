@@ -24,6 +24,11 @@ export default async function decorate(fieldDiv, fieldJson) {
   // CLEAR only inner content
   fieldDiv.innerHTML = '';
 
+  // ✅ ADD TITLE (this was missing)
+  const label = document.createElement('div');
+  label.className = 'field-label';
+  label.textContent = props['jcr:title'] || props.label || '';
+
   const input = document.createElement('input');
   input.type = 'file';
   input.name = props.name || 'upload';
@@ -78,8 +83,8 @@ export default async function decorate(fieldDiv, fieldJson) {
     fileName.textContent = `Selected: ${file.name}`;
   });
 
-  // ONLY inner content
-  fieldDiv.append(input, button, dragText, fileName, error);
+  // ✅ IMPORTANT: label FIRST
+  fieldDiv.append(label, input, button, dragText, fileName, error);
 
   return fieldDiv;
 }
