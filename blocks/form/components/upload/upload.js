@@ -21,12 +21,20 @@ export default async function decorate(fieldDiv, fieldJson) {
 
   const props = fieldJson?.properties || fieldJson || {};
 
-  // ✅ ADD TITLE (THIS IS THE FIX)
-  const label = document.createElement('div');
-  label.className = 'field-label';
-  label.textContent = props['jcr:title'] || props.label || 'Upload File';
+  // ✅ OUTER WRAPPER (like other fields)
+  const wrapper = document.createElement('div');
+  wrapper.className = 'field-wrapper field-upload';
 
-  // Create input
+  // ✅ LABEL OUTSIDE
+  const label = document.createElement('label');
+  label.className = 'field-label';
+  label.textContent = props['jcr:title'] || 'Upload Aadhar Card / PAN Card';
+
+  // INNER BOX
+  const box = document.createElement('div');
+  box.className = 'upload-box';
+
+  // INPUT
   const input = document.createElement('input');
   input.type = 'file';
   input.name = props.name || 'upload';
@@ -37,12 +45,14 @@ export default async function decorate(fieldDiv, fieldJson) {
       : props.accept;
   }
 
+  // BUTTON (TOP)
   const button = document.createElement('button');
   button.type = 'button';
   button.textContent = props.buttonText || 'Upload File';
 
+  // DRAG TEXT (BOTTOM)
   const dragText = document.createElement('p');
-  dragText.textContent = props.dragDropText || 'Drag & Drop files here';
+  dragText.textContent = props.dragDropText || 'Drag and Drop To Upload';
 
   const fileName = document.createElement('div');
   fileName.className = 'file-name';
@@ -56,32 +66,23 @@ export default async function decorate(fieldDiv, fieldJson) {
     const file = input.files[0];
     if (!file) return;
 
-    if (props.maxFileSize) {
-      const maxSize = props.maxFileSize * 1024 * 1024;
-      if (file.size > maxSize) {
-        error.textContent = props.maxFileSizeMessage || 'File is too large';
-        fileName.textContent = '';
-        input.value = '';
-        return;
-      }
-    }
-
     fileName.textContent = `Selected: ${file.name}`;
     error.textContent = '';
   });
 
-  fieldDiv.addEventListener('dragover', (e) => {
+  // DRAG EVENTS
+  box.addEventListener('dragover', (e) => {
     e.preventDefault();
-    fieldDiv.classList.add('dragover');
+    box.classList.add('dragover');
   });
 
-  fieldDiv.addEventListener('dragleave', () => {
-    fieldDiv.classList.remove('dragover');
+  box.addEventListener('dragleave', () => {
+    box.classList.remove('dragover');
   });
 
-  fieldDiv.addEventListener('drop', (e) => {
+  box.addEventListener('drop', (e) => {
     e.preventDefault();
-    fieldDiv.classList.remove('dragover');
+    box.classList.remove('dragover');
 
     const file = e.dataTransfer.files[0];
     if (!file) return;
@@ -90,9 +91,12 @@ export default async function decorate(fieldDiv, fieldJson) {
     fileName.textContent = `Selected: ${file.name}`;
   });
 
-  // ✅ ADD label here
+  // STRUCTURE
+  box.append(input, button, dragText, fileName, error);
+  wrapper.append(label, box);
+
   fieldDiv.innerHTML = '';
-  fieldDiv.append(label, input, button, dragText, fileName, error);
+  fieldDiv.append(wrapper);
 
   return fieldDiv;
 }
