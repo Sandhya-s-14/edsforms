@@ -21,20 +21,9 @@ export default async function decorate(fieldDiv, fieldJson) {
 
   const props = fieldJson?.properties || fieldJson || {};
 
-  // ✅ OUTER WRAPPER (like other fields)
-  const wrapper = document.createElement('div');
-  wrapper.className = 'field-wrapper field-upload';
+  // CLEAR only inner content
+  fieldDiv.innerHTML = '';
 
-  // ✅ LABEL OUTSIDE
-  const label = document.createElement('label');
-  label.className = 'field-label';
-  label.textContent = props['jcr:title'] || 'Upload Aadhar Card / PAN Card';
-
-  // INNER BOX
-  const box = document.createElement('div');
-  box.className = 'upload-box';
-
-  // INPUT
   const input = document.createElement('input');
   input.type = 'file';
   input.name = props.name || 'upload';
@@ -45,12 +34,10 @@ export default async function decorate(fieldDiv, fieldJson) {
       : props.accept;
   }
 
-  // BUTTON (TOP)
   const button = document.createElement('button');
   button.type = 'button';
   button.textContent = props.buttonText || 'Upload File';
 
-  // DRAG TEXT (BOTTOM)
   const dragText = document.createElement('p');
   dragText.textContent = props.dragDropText || 'Drag and Drop To Upload';
 
@@ -71,18 +58,18 @@ export default async function decorate(fieldDiv, fieldJson) {
   });
 
   // DRAG EVENTS
-  box.addEventListener('dragover', (e) => {
+  fieldDiv.addEventListener('dragover', (e) => {
     e.preventDefault();
-    box.classList.add('dragover');
+    fieldDiv.classList.add('dragover');
   });
 
-  box.addEventListener('dragleave', () => {
-    box.classList.remove('dragover');
+  fieldDiv.addEventListener('dragleave', () => {
+    fieldDiv.classList.remove('dragover');
   });
 
-  box.addEventListener('drop', (e) => {
+  fieldDiv.addEventListener('drop', (e) => {
     e.preventDefault();
-    box.classList.remove('dragover');
+    fieldDiv.classList.remove('dragover');
 
     const file = e.dataTransfer.files[0];
     if (!file) return;
@@ -91,12 +78,8 @@ export default async function decorate(fieldDiv, fieldJson) {
     fileName.textContent = `Selected: ${file.name}`;
   });
 
-  // STRUCTURE
-  box.append(input, button, dragText, fileName, error);
-  wrapper.append(label, box);
-
-  fieldDiv.innerHTML = '';
-  fieldDiv.append(wrapper);
+  // ONLY inner content
+  fieldDiv.append(input, button, dragText, fileName, error);
 
   return fieldDiv;
 }

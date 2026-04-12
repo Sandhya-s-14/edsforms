@@ -1,81 +1,56 @@
-/* Wrapper */
-.field-upload,
-.upload,
-.fd-fileinput {
-  border: 2px dashed #ccc;
+/* Upload box ONLY (no outer wrapper styling) */
+.upload {
+  border: 2px dashed #0070f3;
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
-  background-color: #fafafa;
+  background-color: #f0f4f8;
   transition: all 0.3s ease;
 }
 
-/* Hover */
-.field-upload:hover,
+/* Hover / drag effect */
 .upload:hover,
-.fd-fileinput:hover {
-  border-color: #0070f3;
-  background-color: #f0f8ff;
-}
-
-/* ✅ TITLE / LABEL (THIS IS WHAT YOU NEED) */
-.field-upload .field-label {
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #222;
-  text-align: left;
+.upload.dragover {
+  border-color: #005bb5;
+  background-color: #e6f2ff;
 }
 
 /* Hide default input */
-.field-upload input[type="file"],
-.upload input[type="file"],
-.fd-fileinput input[type="file"] {
+.upload input[type="file"] {
   display: none;
 }
 
-/* Upload Button */
-.field-upload button,
-.upload button,
-.fd-fileinput button {
-  background-color: #0070f3;
+/* Upload button (top) */
+.upload button {
+  background-color: #5c85c3;
   color: #fff;
   border: none;
-  padding: 10px 18px;
+  padding: 12px 20px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
+  font-size: 16px;
 }
 
-.field-upload button:hover,
-.upload button:hover,
-.fd-fileinput button:hover {
-  background-color: #005bb5;
+.upload button:hover {
+  background-color: #3f6fb5;
 }
 
-/* Drag text */
-.field-upload p,
-.upload p,
-.fd-fileinput p {
-  color: #666;
+/* Drag text (below button) */
+.upload p {
+  margin-top: 15px;
+  color: #555;
   font-size: 14px;
-  margin-top: 8px;
 }
 
 /* File name */
-.upload .file-name,
-.field-upload .file-name {
+.upload .file-name {
   margin-top: 10px;
   font-size: 13px;
   color: #333;
 }
 
 /* Error */
-.upload .error,
-.fd-fileinput .error,
-.field-upload .error {
+.upload .error {
   color: red;
   font-size: 12px;
   margin-top: 5px;
