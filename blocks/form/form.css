@@ -859,3 +859,30 @@ main .form label {
 main .form form {
   display: block;
 }
+
+/* CENTER CONTENT INSIDE PANEL */
+main .form form .panel-wrapper.field-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontal center */
+  justify-content: center;
+  text-align: center;
+}
+
+/* MAKE TEXT FULL WIDTH + CENTER */
+main .form form .panel-wrapper.field-feedback p {
+  text-align: center;
+  width: 100%;
+}
+
+/* CENTER STARS */
+main .form form .panel-wrapper.field-feedback .rating-stars {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* IF STARS ARE SPANS */
+main .form form .panel-wrapper.field-feedback span {
+  text-align: center;
+}
