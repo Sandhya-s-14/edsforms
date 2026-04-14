@@ -266,3 +266,41 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/*--------------------------------I ADDED THIS -------------------------------------------------*/
+.top-header {
+  background-color: #0b1f4d; /* dark blue */
+  padding: 16px 24px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 36px;
+}
+
+/* secure badge */
+.secure-badge {
+  background-color: #1db954;
+  color: white;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.top-header {
+  background-color: #0b1f4d;
+  padding: 18px 32px;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
