@@ -18,3 +18,46 @@ footer .footer p {
     padding: 40px 32px 24px;
   }
 }
+
+/*-------------------------------I added this---------------------------------*/
+/* REMOVE DEFAULT BODY GAP */
+body {
+  margin: 0;
+}
+
+/* ===== FOOTER WRAPPER ===== */
+footer.footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ===== FOOTER BAR ===== */
+.footer {
+  background: #03164a; /* same as header */
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* ===== TEXT ===== */
+.footer::before {
+  content: "© Copyright HDFC Bank Ltd.";
+}
+
+/* ===== HIDE DEFAULT AEM CONTENT ===== */
+.footer > * {
+  display: none;
+}
+
+/* ===== PREVENT OVERLAP WITH CONTENT ===== */
+main {
+  padding-bottom: 32px;
+}
