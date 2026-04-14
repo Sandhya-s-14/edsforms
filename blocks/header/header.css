@@ -268,21 +268,36 @@ header nav .nav-tools {
 }
 
 /*--------------------------------I ADDED THIS -------------------------------------------------*/
-/* ===== FULL HEADER (AEM - header-wrapper) ===== */
+/* REMOVE DEFAULT BODY GAP */
+body {
+  margin: 0;
+}
+
 /* ===== HEADER ===== */
 .header {
   background: #03164a;
   height: 72px;
-  padding: 0 32px;
+  padding: 0 40px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  margin: 16px 24px 0;
+  /* FULL WIDTH FIX */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* REMOVE ALL GAPS */
+  margin: 0;
+
+  z-index: 1000;
+
   border-radius: 0 0 16px 16px;
 }
 
-/* ===== LOGO ===== */
+/* ===== LOGO (LEFT) ===== */
 .header::before {
   content: "HDFC BANK";
   display: flex;
@@ -293,17 +308,17 @@ header nav .nav-tools {
   font-size: 13px;
   font-weight: 700;
 
-  height: 28px;
-  padding: 0 16px 0 20px;
+  height: 30px;
+  padding: 0 16px 0 22px;
 
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   border-radius: 4px;
 
-  /* RED BOX */
-  box-shadow: inset 12px 0 0 #e21b23;
+  /* RED BLOCK */
+  box-shadow: inset 14px 0 0 #e21b23;
 }
 
-/* ===== BADGE ===== */
+/* ===== BADGE (RIGHT) ===== */
 .header::after {
   content: "100% SAFE";
   display: flex;
@@ -315,11 +330,16 @@ header nav .nav-tools {
   font-size: 12px;
   font-weight: 600;
 
-  padding: 6px 16px;
+  padding: 6px 18px;
   border-radius: 20px;
 }
 
-/* ===== HIDE DEFAULT ===== */
+/* ===== HIDE AEM DEFAULT CONTENT ===== */
 .header > * {
   display: none;
+}
+
+/* ===== PREVENT CONTENT OVERLAP ===== */
+main {
+  padding-top: 72px;
 }
