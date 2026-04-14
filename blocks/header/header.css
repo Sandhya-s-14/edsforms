@@ -268,46 +268,36 @@ header nav .nav-tools {
 }
 
 /*--------------------------------I ADDED THIS -------------------------------------------------*/
-/* ===== HDFC STYLE HEADER USING EXISTING CLASSES ===== */
+/* ===== FULL HEADER (AEM - header-wrapper) ===== */
 
-/* ===== FULL HEADER DESIGN (HDFC STYLE) ===== */
+header.header-wrapper {
+  background-color: #0b1f4d; /* dark blue like HDFC */
+  height: 72px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  box-sizing: border-box;
 
-header .nav-wrapper {
-  background-color: #0b1f4d; /* HDFC dark blue */
   border-bottom-left-radius: 14px;
   border-bottom-right-radius: 14px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
 
-/* NAV CONTAINER */
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* only logo */
-  height: 72px;
-  padding: 0 32px;
-  max-width: 1280px;
-  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 /* LOGO */
-header .nav-brand {
-  display: flex;
-  align-items: center;
-}
-
-header .nav-brand img {
+header.header-wrapper img {
   height: 40px;
   width: auto;
   object-fit: contain;
 }
 
-/* HIDE EVERYTHING ELSE */
-header .nav-hamburger,
-header .nav-sections,
-header .nav-tools {
-  display: none !important;
+/* OPTIONAL: CENTER ALIGN FIX */
+header.header-wrapper > * {
+  display: flex;
+  align-items: center;
 }
