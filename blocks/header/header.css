@@ -269,35 +269,63 @@ header nav .nav-tools {
 
 /*--------------------------------I ADDED THIS -------------------------------------------------*/
 /* ===== FULL HEADER (AEM - header-wrapper) ===== */
-
-header.header-wrapper {
-  background-color: #0b1f4d; /* dark blue like HDFC */
-  height: 72px;
-  width: 100%;
+/* ===== HEADER WRAPPER ===== */
+/* ===== HEADER (AEM block) ===== */
+.header {
+  background: #03164a;
+  min-height: 72px;
+  padding: 0 48px;
   display: flex;
   align-items: center;
-  padding: 0 32px;
+  justify-content: space-between;
+  position: relative;
+  margin: 24px 24px 0;
+  border-radius: 0 0 14px 14px;
+}
+
+/* ===== LEFT LOGO ===== */
+.header::before {
+  content: "HDFC BANK";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #0a2d7c;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+
+  height: 20px;
+  padding: 0 10px 0 18px;
+
+  border: 1px solid #ffffff;
   box-sizing: border-box;
 
-  border-bottom-left-radius: 14px;
-  border-bottom-right-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  /* RED SQUARE */
+  box-shadow: inset 8px 0 0 #e21b23;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  border-radius: 2px;
 }
 
-/* LOGO */
-header.header-wrapper img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* OPTIONAL: CENTER ALIGN FIX */
-header.header-wrapper > * {
-  display: flex;
+/* ===== RIGHT BADGE ===== */
+.header::after {
+  content: "100% SAFE";
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+
+  background: #39b56a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+
+  border-radius: 12px;
+  padding: 4px 12px;
+  line-height: 1;
+}
+
+/* ===== HIDE DEFAULT CONTENT ===== */
+.header > * {
+  display: none;
 }
