@@ -557,36 +557,32 @@ header nav .nav-tools {
 =======
 
 /*--------------------------------I ADDED THIS -------------------------------------------------*/
-.top-header {
-  background-color: #0b1f4d; /* dark blue */
-  padding: 16px 24px;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+/* ===== HDFC STYLE HEADER USING EXISTING CLASSES ===== */
+
+/* ===== FULL HEADER DESIGN (HDFC STYLE) ===== */
+
+header .nav-wrapper {
+  background-color: #0b1f4d; /* HDFC dark blue */
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo img {
-  height: 36px;
-}
-
-/* secure badge */
-.secure-badge {
-  background-color: #1db954;
-  color: white;
-  font-size: 12px;
-  padding: 6px 12px;
-  border-radius: 20px;
+/* NAV CONTAINER */
+header nav {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 500;
+  justify-content: flex-start; /* only logo */
+  height: 72px;
+  padding: 0 32px;
+  max-width: 1280px;
+  margin: auto;
 }
 
+<<<<<<< HEAD
 .top-header {
   background-color: #0b1f4d;
   padding: 18px 32px;
@@ -594,3 +590,23 @@ header nav .nav-tools {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 >>>>>>> fd00078 (Header)
+=======
+/* LOGO */
+header .nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+header .nav-brand img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* HIDE EVERYTHING ELSE */
+header .nav-hamburger,
+header .nav-sections,
+header .nav-tools {
+  display: none !important;
+}
+>>>>>>> 81fa5a2 (header-new)
