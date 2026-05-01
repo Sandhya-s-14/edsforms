@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 mountpoints:
 <<<<<<< HEAD
   /:
@@ -10,3 +11,10 @@ mountpoints:
           type: "markup"
           suffix: ".html
 >>>>>>> 199e470 (Create fstab.yaml)
+=======
+mountpoints:
+    /: 
+          url: https://author-p96753-e1523920.adobeaemcloud.com/bin/franklin.delivery/Sandhya-s-14/edsforms/main
+          type: "markup"
+          suffix: ".html
+>>>>>>> 3d2f606 (fix: removed wildcard filters)

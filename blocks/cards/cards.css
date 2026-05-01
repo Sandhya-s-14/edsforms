@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -76,3 +77,69 @@
   font-size: 14px;
   margin-bottom: 5px;
 }
+=======
+.card-container {
+  padding: 20px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.card:hover {
+  border-color: #1976d2;
+}
+
+.card.active {
+  border: 2px solid #1976d2;
+  background-color: #f5faff;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-header span {
+  font-weight: 500;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.card-image img {
+  width: 120px;
+}
+
+.card-benefits {
+  padding-left: 18px;
+}
+
+.card-benefits li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+>>>>>>> 3d2f606 (fix: removed wildcard filters)

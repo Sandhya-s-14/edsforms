@@ -4,36 +4,24 @@
       "title": "Default Content",
       "id": "default",
       "components": [
-        {
-          "...": "./_text.json#/definitions"
-        },
-        {
-          "...": "./_title.json#/definitions"
-        },
-        {
-          "...": "./_image.json#/definitions"
-        },
-        {
-          "...": "./_button.json#/definitions"
-        }
+        { "...": "./_text.json#/definitions" },
+        { "...": "./_title.json#/definitions" },
+        { "...": "./_image.json#/definitions" },
+        { "...": "./_button.json#/definitions" }
       ]
     },
     {
       "title": "Sections",
       "id": "sections",
       "components": [
-        {
-          "...": "./_section.json#/definitions"
-        }
+        { "...": "./_section.json#/definitions" }
       ]
     },
     {
       "title": "Blocks",
       "id": "blocks",
       "components": [
-        {
-          "...": "../blocks/*/_*.json#/definitions"
-        }
+        
       ]
 <<<<<<< HEAD
     }
@@ -45,17 +33,14 @@
       "title": "Custom Form Components",
       "id": "custom-components",
       "components": [
-        {
-          "...": "../blocks/form/components/range/_range.json#/definitions"
-        },
-        {
-          "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/definitions"
-        },
-        {
-          "...": "../blocks/form/components/file-upload/_file-upload.json#/definitions"
-        }
+        { "...": "../blocks/form/components/range/_range.json#/definitions" },
+        { "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/definitions" }
       ]
     }
   ]
 }
+<<<<<<< HEAD
 >>>>>>> df58285 (Initial commit)
+=======
+
+>>>>>>> 3d2f606 (fix: removed wildcard filters)

@@ -81,6 +81,7 @@
     {
       "title": "Blocks",
       "id": "blocks",
+<<<<<<< HEAD
       "components": [
         {
           "title": "Cards",
@@ -667,6 +668,9 @@
       ]
 <<<<<<< HEAD
 =======
+=======
+      "components": []
+>>>>>>> 3d2f606 (fix: removed wildcard filters)
     },
     {
       "title": "Custom Form Components",

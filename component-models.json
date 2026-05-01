@@ -140,6 +140,7 @@
         ]
       }
     ]
+<<<<<<< HEAD
   },
   {
     "id": "card",
@@ -5177,5 +5178,7 @@
         "valueType": "string"
       }
     ]
+=======
+>>>>>>> 3d2f606 (fix: removed wildcard filters)
   }
 ]

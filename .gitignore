@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .hlx/*
 coverage/*
 logs/*
@@ -23,3 +24,27 @@ LoginAuth.json
 # Skill distribution zip
 create-custom-component.zip
 >>>>>>> df58285 (Initial commit)
+=======
+.hlx/*
+coverage/*
+logs/*
+node_modules/*
+
+helix-importer-ui
+.DS_Store
+*.bak
+.idea
+.nyc_output
+
+.env*
+.vscode
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+test/e2e/reports/
+LoginAuth.json
+
+# Skill distribution zip
+create-custom-component.zip
+>>>>>>> 3d2f606 (fix: removed wildcard filters)

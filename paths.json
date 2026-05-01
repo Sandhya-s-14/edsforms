@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "mappings": [
 <<<<<<< HEAD
@@ -14,3 +15,14 @@
 >>>>>>> df58285 (Initial commit)
   ]
 }
+=======
+{
+  "mappings": [
+    "/:/"
+  ],
+  "includes": [
+    "/content/",
+    "/content/dam/"
+  ]
+}
+>>>>>>> 3d2f606 (fix: removed wildcard filters)
