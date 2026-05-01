@@ -1,27 +1,52 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 36a32cb (upload)
 {
   "groups": [
     {
       "title": "Default Content",
       "id": "default",
       "components": [
+<<<<<<< HEAD
         { "...": "./_text.json#/definitions" },
         { "...": "./_title.json#/definitions" },
         { "...": "./_image.json#/definitions" },
         { "...": "./_button.json#/definitions" }
+=======
+        {
+          "...": "./_text.json#/definitions"
+        },
+        {
+          "...": "./_title.json#/definitions"
+        },
+        {
+          "...": "./_image.json#/definitions"
+        },
+        {
+          "...": "./_button.json#/definitions"
+        }
+>>>>>>> 36a32cb (upload)
       ]
     },
     {
       "title": "Sections",
       "id": "sections",
       "components": [
+<<<<<<< HEAD
         { "...": "./_section.json#/definitions" }
+=======
+        {
+          "...": "./_section.json#/definitions"
+        }
+>>>>>>> 36a32cb (upload)
       ]
     },
     {
       "title": "Blocks",
       "id": "blocks",
       "components": [
+<<<<<<< HEAD
         { "...": "../blocks/form/_form.json#/definitions" }
       ]
 <<<<<<< HEAD
@@ -29,11 +54,18 @@
   ]
 }
 =======
+=======
+        {
+          "...": "../blocks/*/_*.json#/definitions"
+        }
+      ]
+>>>>>>> 36a32cb (upload)
     },
     {
       "title": "Custom Form Components",
       "id": "custom-components",
       "components": [
+<<<<<<< HEAD
         { "...": "../blocks/form/components/range/_range.json#/definitions" },
         { "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/definitions" }
       ]
@@ -60,3 +92,18 @@
    "components": [ { "...": "../blocks/form/components/range/_range.json#/definitions" }, 
    { "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/definitions" } ] } ] }
 >>>>>>> a6d1ccb (temp commit)
+=======
+        {
+          "...": "../blocks/form/components/range/_range.json#/definitions"
+        },
+        {
+          "...": "../blocks/form/components/my-custom-card/_my-custom-card.json#/definitions"
+        },
+        {
+          "...": "../blocks/form/components/upload/_upload.json#/definitions"
+        }
+      ]
+    }
+  ]
+}
+>>>>>>> 36a32cb (upload)
