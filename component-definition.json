@@ -82,6 +82,7 @@
       "title": "Blocks",
       "id": "blocks",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "components": [
         {
           "title": "Cards",
@@ -146,6 +147,10 @@
           }
         },
         {
+=======
+      "components": [
+        {
+>>>>>>> 5da0c24 (fix: allow blocks in filters)
           "title": "Adaptive Form",
           "id": "form",
           "plugins": {
@@ -633,6 +638,7 @@
               }
             }
           }
+<<<<<<< HEAD
         },
         {
 >>>>>>> df58285 (Initial commit)
@@ -671,6 +677,10 @@
 =======
       "components": []
 >>>>>>> 3d2f606 (fix: removed wildcard filters)
+=======
+        }
+      ]
+>>>>>>> 5da0c24 (fix: allow blocks in filters)
     },
     {
       "title": "Custom Form Components",

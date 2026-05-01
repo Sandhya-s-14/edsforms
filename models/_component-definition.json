@@ -21,7 +21,7 @@
       "title": "Blocks",
       "id": "blocks",
       "components": [
-        
+        { "...": "../blocks/form/_form.json#/definitions" }
       ]
 <<<<<<< HEAD
     }

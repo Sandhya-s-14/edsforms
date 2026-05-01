@@ -2,7 +2,10 @@
   {
     "id": "main",
     "components": [
-      "section"
+      "section",
+      "form",
+      "range",
+      "my-custom-card"
     ]
   },
   {
