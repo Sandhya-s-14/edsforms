@@ -4,6 +4,7 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
 <<<<<<< HEAD
     - uses: actions/checkout@v6
@@ -13,10 +14,23 @@ jobs:
         node-version: 24
 =======
     - uses: actions/checkout@v4
-    - name: Use Node.js 20
+
+    - name: Use Node.js 18
       uses: actions/setup-node@v4
       with:
+<<<<<<< HEAD
         node-version: 20
 >>>>>>> df58285 (Initial commit)
     - run: npm ci
     - run: npm run lint
+=======
+        node-version: 18   # safer than 20
+
+    - name: Install dependencies
+      run: npm ci
+      working-directory: edsforms
+
+    - name: Run lint
+      run: npm run lint
+      working-directory: edsforms
+>>>>>>> cea56cf (fix: correct working directory)
